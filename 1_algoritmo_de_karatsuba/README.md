@@ -5,7 +5,8 @@ Diferente da multiplicação padrão (multiplicação por colunas), que possui o
 No processo padrão, os fatores são divididos em várias dezenas e cada uma dessas dezenas são multiplicadas iterativamente entre si e corrigindo o número de zeros à frente de acordo com o cenário, para se ter a dezena correta. Por exemplo, na multiplicação de 32 x 100, o que temos na verdade é a multiplicação de [(10 x 30) + (1 x 2)] x 100. Isso é exatamente igual a [(10 x 30) + (1 x 2)] x [(100 x 1) + (10 x 0) + (1 x 0)]. Então, na prática, faz se exatamente essa multiplicação distributiva porém com um algoritmo em forma de colunas no papel. Como cada algarismo do primeiro fator será multiplicado por cada algarismo do outro fator, entende-se porquê a ordem de complexidade é n<sup>2</sup>.    
 O algoritmo de Karatsuba é um método que deriva da seguinte expressão matemática:    
 </br>
-$x = a \times 10^{\frac{n}{2}} + b $    
+$x = a \times 10^{\frac{n}{2}} + b $   
+</br> 
 sendo 'x' um dos fatores a ser multiplicado, 'a' a primeira metade do número e 'b' a segunda metade.
 
 De forma análoga, o outro fator pode ser desmembrado como:
@@ -15,11 +16,9 @@ $y = c \times 10^{\frac{n}{2}} + d $
 Multiplicando x por y tem-se:    
 
 $(a \times 10^{\frac{n}{2}} + b) \times (c \times 10^{\frac{n}{2}} + d) $    
-
-
-$(a \times 10^{\frac{n}{2}} + b)(c \times 10^{\frac{n}{2}} + d) $
 </br>
 $=(a \times 10^{\frac{n}{2}})(c \times 10^{\frac{n}{2}}) + a d \times 10^{\frac{n}{2}} + b c \times 10^{\frac{n}{2}} + b d $
+</br>
 </br>
 $= a c \times 10^{2 \times \frac{n}{2}} + (a d + b c) \times 10^{\frac{n}{2}} + b d $
 </br>

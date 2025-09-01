@@ -1,7 +1,6 @@
 import random
 
 def maxMinSelect(lista):
-    listaTuplas = []
     if len(lista) == 2:
         if(lista[0] < lista[1]):
             return (lista[0], lista[1])
@@ -12,19 +11,11 @@ def maxMinSelect(lista):
     else:
         meio = len(lista)//2
         menorMaior1 = maxMinSelect(lista[0:meio])
-        listaTuplas.append(menorMaior1)
         menorMaior2 = maxMinSelect(lista[meio:])
-        listaTuplas.append(menorMaior2)
 
-        listaMenores = []
-        listaMaiores = []
-        for i in listaTuplas:
-            listaMenores.append(i[0])
-            listaMaiores.append(i[1])
-        
-        return (maxMinSelect(listaMenores)[0], maxMinSelect(listaMaiores)[1]) 
-        
-        #return (min(listaMenores), max(listaMaiores))
+        menor_final = min(menorMaior1[0], menorMaior2[0])
+        maior_final = max(menorMaior1[1], menorMaior2[1])
+        return (menor_final, maior_final)
     
 
 

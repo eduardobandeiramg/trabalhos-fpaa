@@ -23,6 +23,24 @@ $2 comparações \times(\sum_{i=0}^{{\log_{2} n} - 1} i^2) + \frac{n}{2}$
 
 Entende-se, portanto, que trata-se de uma função de complexidade igual a O(n).
 
+## Análise da complexidade assintótica pela aplicação do teorema mestre
+O teorema mestre é dado pela fórmula:    
+$T(n) = a \times T \dot (\frac{n}{b} + f(n))$
+
+O teorema define a ordem de complexidade de um algoritmo recursivo avaliando qual das duas funções domina:    
+f(n) ou $n^{\log_{b} a}$    
+Caso sejam equivalentes, a solução será igual a $n^{\log_{b} a} \times x$, sendo x um fator logarítmico.    
+
+Considerando a recorrência do MaxMinSelect como sendo:    
+$T(n) = 2 \dot T (\frac{n}{b}) + O(2)$     
+1. Os valores de a, b e f(n) são, respectivamente:
+    * 2
+    * 2
+    * O(1)
+2. $\log_{b} a = \log_{2} 2 = 1$
+3. Como $O(n^\log_{b} a) = O(n)$ domina assintoticamente $O(1)$, este algoritmo se encaixa no *caso 1*
+4. $T(n) = \Theta(n)$
+
 ## Como executar o código
 1. Clone o repositório
 2. Abra o projeto na sua IDE de preferência

@@ -5,9 +5,9 @@ Trata-se de um algoritmo recursivo, onde a parada ocorre quando a lista tem tama
 ## Análise da complexidade assintótica pelo método de contagem de operações
 ### Comparações em cada etapa do algoritmo
 * 1ª etapa do algoritmo: lista tem tamanho 1 ou 2.   
-Nesta etapa é feita uma comparação para se determinar e então retornar a **tupla do valor mínimo e máximo**, nesta ordem.
+Nesta etapa é feita **uma comparação** para se determinar e então retornar a **tupla do valor mínimo e máximo**, nesta ordem.
 * 2ª etapa do algoritmo: lista tem tamanho maior que 2.  
-Nesta etapa chama-se a função sobre a parte esquerda da lista. Caso essa parte entre na 1ª parte do algoritmo e retorne a tupla de mínimo e máximo, o valor é armazenado e então chama-se a função para a parte direita. De forma análoga, o valor da tupla de mínimo e máximo também é armazenada caso a chamada entre na mesma condição. Então, é feita a comparação para se determinar o **menor valor dentre os dois valores mínimos** e o **maior valor dentre os dois valores máximos**.    
+Nesta etapa chama-se a função sobre a parte esquerda da lista. Caso essa parte entre na 1ª parte do algoritmo e retorne a tupla de mínimo e máximo, o valor é armazenado e então chama-se a função para a parte direita. De forma análoga, o valor da tupla de mínimo e máximo também é armazenada caso a chamada entre na mesma condição. Então, é feita a comparação para se determinar o **menor valor dentre os dois valores mínimos** e o **maior valor dentre os dois valores máximos**. Ou seja, na segunda parte são feitas **duas comparações**.    
 Resumidamente, é feita **1 comparação na primeira parte do algoritmo** e **2 comparações na segunda parte do algoritmo**.
 
 ### Total de comparações para n elementos

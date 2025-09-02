@@ -39,7 +39,7 @@ $T(n) = 2 \dot T (\frac{n}{b}) + O(2)$
     * O(1)
 2. $\log_{b} a = \log_{2} 2 = 1$
 3. Como $O(n^{\log_{b} a}) = O(n)$ domina assintoticamente $O(1)$, este algoritmo se encaixa no *caso 1*
-4. $T(n) = \Theta(n)$
+4. A solução assintótica da fórmula é dada por: $T(n) = \Theta(n)$
 
 ## Como executar o código
 1. Clone o repositório

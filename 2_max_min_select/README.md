@@ -17,9 +17,9 @@ Assim, tem-se a seguinte função:
 
 $\sum_{i=0}^{{\log_{2} n} - 1} i^2$    
 
-A função acima descreve o número de partições maiores que 2 que o algoritmo irá avaliar. Cada uma dessas parições realiza duas comparações. Então, multiplica-se esse valor por 2 e depois soma-se ao número de partições menores ou iguais a 2 do algoritmo (n/2). Ao final tem-se a seguinte função:
+A função acima descreve o número de partições maiores que 2 que o algoritmo irá avaliar. Cada uma dessas partições realiza duas comparações. Então, multiplica-se esse valor por 2 e depois soma-se ao número de partições menores ou iguais a 2 do algoritmo (n/2). Ao final tem-se a seguinte função:
 
-$2 comparações \times(\sum_{i=0}^{{\log_{2} n} - 1} i^2) + \frac{n}{2}$    
+$2 comparações \times(\sum_{i=0}^{{\log_{2} n} - 1} i^2) + \frac{n}{2} comparações$    
 
 Entende-se, portanto, que trata-se de uma função de complexidade igual a O(n).
 

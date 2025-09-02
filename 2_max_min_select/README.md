@@ -1,3 +1,5 @@
+<div style="text-align: justify;">
+
 # Algoritmo de seleção simultânea do maior e menor elementos
 Como o próprio nome sugere, esse algoritmo tem como objetivo buscar o menor e o maior valor de uma lista de números. Ele se caracteriza como um algoritmo clássico de divisão e conquista, onde a lista é subdividida em listas menores até que se chegue ao ponto de ser necessário apenas uma comparação simples de valores (**linha 4 e linha 9**). Esse ponto acontece quando a lista analisada tem tamanho 1 ou 2.   
 Trata-se de um algoritmo recursivo, onde a parada ocorre quando a lista tem tamanho 1 ou 2 (**linhas 6, 8 ou 10**). Quando essa condição não é verdadeira, é feita uma chamada sobre a partição esquerda (**linha 13**) e então direita (**linha 14**) da lista. Quando os valores provenientes da comparação simples são retornados para a chamada acima na pilha (**linha 18**), é então avaliado esses valores para o lado direito (**linha 14**). Então, avalia-se o menor e maior valor também por comparação simples entre os dois valores obtidos como mínimos e os dois valores obtidos como máximos (**linhas 16 e 17**). O resultado é retornado para a chamada acima até que a última comparação seja entre as tuplas de mínimo/máximo da partição esquerda e direita da lista original. Então, faz-se a comparação dos mínimos e máximos (**linhas 16 e 17**), retornando o resultado final.
@@ -52,3 +54,5 @@ $T(n) = 2 \dot T (\frac{n}{b}) + O(2)$
 `pip install -r requirements.txt`
 6. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando:   
 `python main.py`
+
+</div>

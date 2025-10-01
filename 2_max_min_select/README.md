@@ -45,15 +45,31 @@ $T(n) = 2 \dot T (\frac{n}{b}) + O(2)$
 1. Clone o repositório
 2. Abra o projeto na sua IDE de preferência
 3. Crie um ambiente virtual python, executando o seguinte comando no terminal:   
-`python3 -m venv .venv`
+```
+python3 -m venv .venv
+```
 4. Ative o ambiente virtual executando o seguinte comando no terminal:
     No Windows:
-    `.\.venv\Scripts\Activate.ps1`
-    No Mac:
-    `source .venv/bin/activate`
+    ```
+    .\.venv\Scripts\Activate.ps1
+    ```
+    No Mac ou Linux:
+    ```
+    source .venv/bin/activate
+    ```
 5. Instale as dependências:   
-`pip install -r requirements.txt`
+    ```
+    pip install -r requirements.txt
+    ```
 6. Navegue até a pasta que contém o código:   
-`cd 2_max_min_select/code`
+```
+cd 2_max_min_select/code
+```
 7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando    
-`python main.py`
+```
+python main.py
+```
+8. Para interromper o ambiente virtual, execute o comando:
+```
+deactivate
+```

@@ -51,9 +51,9 @@ $T(n) = 2 \dot T (\frac{n}{b}) + O(2)$
     `.\.venv\Scripts\Activate.ps1`
     No Mac:
     `source .venv/bin/activate`
-5. Navegue até a pasta que contém o código:   
-`cd 2_max_min_select/code`
-6. Instale as dependências:   
+5. Instale as dependências:   
 `pip install -r requirements.txt`
-7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando:   
+6. Navegue até a pasta que contém o código:   
+`cd 2_max_min_select/code`
+7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando    
 `python main.py`

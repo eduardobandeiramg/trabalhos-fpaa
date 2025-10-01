@@ -52,9 +52,9 @@ De fato, o algoritmo possui dois caminhos possíveis: simplesmente retornar o va
     `.\.venv\Scripts\Activate.ps1`
     No Mac:
     `source .venv/bin/activate`
-5. Navegue até a pasta que contém o código:   
-`cd 1_algoritmo_de_karatsuba/code`
-6. Instale as dependências:   
+5. Instale as dependências:   
 `pip install -r requirements.txt`
+6. Navegue até a pasta que contém o código:   
+`cd 1_algoritmo_de_karatsuba/code`
 7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando    
 `python main.py`

@@ -1,16 +1,32 @@
-# Digite abaixo quantos nós deseja no seu grafo:
+# Substitua abaixo quantos nós deseja no seu grafo:
 nos = 4
+# Substitua abaixo o quão completo você deseja que seu grafo seja (de 0 a 1, sendo 0 totalmente incompleto e 1 totalmente completo)
+completude = 1
 
+
+##############################################################################
 import networkx as nx
 import matplotlib.pyplot as plt
+import funcoes_suporte as fs
 
-# Criando o grafo aleatório:
-G = nx.gnp_random_graph(nos, 1)
+# Gerando o grafo aleatório:
+G = nx.gnp_random_graph(nos, completude)
+print("tipo:")
+print(type(G))
 
-# Acessando arestas:
-print(G.edges)
+# Implementando o algoritmo:
+
+listaDeNos = list(range(nos))
+todosOsCaminhosPossiveis = G.edges
+caminhosPercorridos = []
+
+for no in listaDeNos:
+    noAtual = no
+
+
 
 # Desenhando o grafo:
-nx.draw(G, with_labels=True, font_weight='bold', font_color="white")
-plt.show()
+#nx.draw(G, with_labels=True, font_weight='bold', font_color="white")
+#plt.show()
 
+# Desenhando a solução:

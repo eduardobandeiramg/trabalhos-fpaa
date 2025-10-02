@@ -1,4 +1,4 @@
-tupla = (2, 3,5)
+todosNos = [1, 2, 3]
+nosVisitados = [1, 2, 3, 4]
 
-print(type(tupla))
-
+print(set(todosNos) == set(nosVisitados))

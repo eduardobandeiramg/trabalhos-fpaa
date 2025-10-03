@@ -1,7 +1,7 @@
 # Substitua abaixo quantos nós deseja no seu grafo:
 nos = 5
 # Substitua abaixo o quão completo você deseja que seu grafo seja (de 0 a 1, sendo 0 totalmente incompleto e 1 totalmente completo)
-completude = 0.6
+completude = 0.85
 
 
 ##############################################################################

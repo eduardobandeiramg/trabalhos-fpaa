@@ -14,15 +14,17 @@ Ao seguir esses passos, o escoteiro eventualmente encontrará a saída desejada.
 Esse algoritmo implementa uma técnica de projeto de algoritmos chamada 'backtracking', que consiste em testar caminhos e voltar caso encontre um "beco sem saída". Caso um caminho seja encontrado, o algoritmo para e devolve a solução encontrada, que não necessariamente é a melhor ou mais eficiente. Neste caso específico, não há impacto negativo uma vez que não existem atributos que definem um caminho como melhor ou pior, como distância entre os pontos.
 
 ## O que o código retorna
-Caso exista solução, o código exibirá no terminal uma mensagem com o primeiro caminho hamiltoniano encontrado e 2 imagens: uma imagem com o grafo aleatório gerado e outra imagem com o caminho encontrado destacado. Exemplos:    
+Caso exista solução, o código exibirá no terminal uma mensagem com o primeiro caminho hamiltoniano encontrado, todos os caminhos percorridos e 2 imagens: uma imagem com o grafo aleatório gerado e outra imagem com o caminho encontrado destacado. Exemplos:    
 
-![Terminal](imagens_exemplo/terminal_caminho_encontrado.png)
-![Grafo gerado](imagens_exemplo/grafo_exemplo_01.png)
-![Grafo com o caminho destacado](imagens_exemplo/grafo_exemplo_02.png)
+![Terminal](assets/terminal_caminho_encontrado.png)
+![Grafo gerado](assets/grafo_exemplo_01.png)
+![Grafo com o caminho destacado](assets/grafo_exemplo_02.png)
 
-Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, apenas uma imagem com o grafo aleatório gerado será exibida e o que se verá no terminal será o seguinte:
+Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, apenas uma imagem com o grafo aleatório gerado será exibida e o que se verá no terminal será tanto o histórico de caminhos percorridos quanto a seguinte mensagem:
 
-![Nenhum caminho encontrado](imagens_exemplo/terminal_caminho_nao_encontrado.png)
+![Nenhum caminho encontrado](assets/terminal_caminho_nao_encontrado.png)
+
+## Explicando o código
 
 
 ## Como executar o código
@@ -63,3 +65,5 @@ python main.py
 ```
 deactivate
 ```
+
+## Relatório técnico

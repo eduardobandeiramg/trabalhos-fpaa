@@ -1,7 +1,7 @@
 # Substitua abaixo quantos nós deseja no seu grafo:
-nos = 5
+nos = 4
 # Substitua abaixo o quão completo você deseja que seu grafo seja (de 0 a 1, sendo 0 totalmente incompleto e 1 totalmente completo)
-completude = 1
+completude = 0.7
 
 
 ##############################################################################
@@ -10,17 +10,13 @@ import matplotlib.pyplot as plt
 import funcoes_suporte as fs
 
 # Gerando o grafo aleatório:
-G = nx.gnp_random_graph(nos, completude)
+grafo = nx.gnp_random_graph(nos, completude)
 
-# Implementando o algoritmo:
-listaDeNos = list(range(nos))
-nosVisitados = []
-todosOsCaminhosPossiveis = G.edges
-caminhosPercorridos = []
-fs.andeParaONo(listaDeNos[0], listaDeNos, nosVisitados, todosOsCaminhosPossiveis, caminhosPercorridos)
+# Chamando o método sobre o grafo:
+fs.caminhoHamiltoniano(grafo)
 
 # Desenhando o grafo:
-#nx.draw(G, with_labels=True, font_weight='bold', font_color="white")
-#plt.show()
+nx.draw(grafo, with_labels=True, font_weight='bold', font_color="white")
+plt.show()
 
 # Desenhando a solução:

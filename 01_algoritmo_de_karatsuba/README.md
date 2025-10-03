@@ -64,7 +64,7 @@ pip install -r requirements.txt
 ```
 6. Navegue até a pasta que contém o código:   
 ```
-cd 1_algoritmo_de_karatsuba/code
+cd 01_algoritmo_de_karatsuba/code
 ```
 7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando    
 ```

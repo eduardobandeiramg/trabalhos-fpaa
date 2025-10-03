@@ -1,17 +1,17 @@
 # Caminho Hamiltoniano
 O caminho hamiltoniano é um problema conhecido da computação e descrito pelo enunciado clássico do 'caixeiro viajante'.  
-Trata-se da tentativa de se determinar aquele caminho no qual passa-se por todos os nós de um grafo apenas uma vez, voltando ao nó de partida.  
-Existem diveras abordagens possíveis para se resolver esse problema, tais quais: força bruta, backtracking, ...
+Trata-se da tentativa de se determinar aquele caminho no qual passa-se por todos os nós de um grafo exatamente uma vez.
+Existem diveras abordagens possíveis para se resolver esse problema, tais quais: força bruta, algoritmos gulosos, divisão e conquista, backtracking, programação dinâmica, etc.
 
 ## O algoritmo implementado
 Para entender o algoritmo, a melhor maneira é pensar sobre a ideia central dele.   
 O algoritmo basicamente implementa a lógica de um escoteiro perdido na floresta e que precisa chegar à saída. Para isso, ele anda com um caderninho onde anota cada ponto de referência que já passou e sempre toma uma entre 3 opções de decisão quando chega em cada um desses pontos. Essas opções são:
 1. Se percorreu todos os pontos de referência, quer dizer que chegou ao fim. Neste caso, o problema foi resolvido e encerrado. Se não chegou ao fim, então:   
-    1.1. Se possui opções de trajeto, seguir para uma delas, riscar das opções do local, seguir o caminho e registrá-lo na trilha percorrida.
+    1.1. Se possui opções de trajeto, riscar das opções do local, seguir para o próximo ponto de referência e anotar no trajeto caminhado.
     1.2. Se não possui mais opções no ponto de referência que está, voltar pelo caminho que veio e cortá-lo do mapa da trilha.   
 Ao seguir esses passos, o escoteiro eventualmente encontrará a saída desejada.    
 
-Esse algoritmo implementa uma técnica de projeto de algoritmos chamada 'backtracking', que consiste em testar caminhos e voltar caso encontre um "beco sem saída". Caso um caminho seja encontrado, o algoritmo para e devolve a solução encontrada, que não necessariamente é a melhor ou mais eficiente. Neste caso específico, não há impacto negativo uma vez que não existem atributos que definem um caminho como melhor ou pior.
+Esse algoritmo implementa uma técnica de projeto de algoritmos chamada 'backtracking', que consiste em testar caminhos e voltar caso encontre um "beco sem saída". Caso um caminho seja encontrado, o algoritmo para e devolve a solução encontrada, que não necessariamente é a melhor ou mais eficiente. Neste caso específico, não há impacto negativo uma vez que não existem atributos que definem um caminho como melhor ou pior, como distância entre os pontos.
 
 ## O que o código retorna
 Caso exista solução, o código exibirá no terminal uma mensagem com o primeiro caminho hamiltoniano encontrado e 2 imagens: uma imagem com o grafo aleatório gerado e outra imagem com o caminho encontrado destacado. Exemplos:    
@@ -32,7 +32,8 @@ Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, o 
 ```
 python3 -m venv .venv
 ```
-4. Ative o ambiente virtual executando o seguinte comando no terminal:
+4. Ative o ambiente virtual executando o seguinte comando no terminal:    
+    
     No Windows:
     ```
     .\.venv\Scripts\Activate.ps1
@@ -47,7 +48,7 @@ pip install -r requirements.txt
 ```
 6. Navegue até a pasta que contém o código:   
 ```
-cd 3_caminho_hamiltoniano/code
+cd 03_caminho_hamiltoniano/code
 ```
 7. Abra o arquivo 'main.py'
 8. (opcional) Escolha as configurações do grafo a ser gerado aleatoriamente. 
@@ -58,7 +59,7 @@ cd 3_caminho_hamiltoniano/code
 ```
 python main.py
 ```
-8. Para interromper o ambiente virtual, execute o comando:
+10. Para interromper o ambiente virtual, execute o comando:
 ```
 deactivate
 ```

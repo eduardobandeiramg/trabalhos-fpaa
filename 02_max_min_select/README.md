@@ -63,7 +63,7 @@ python3 -m venv .venv
     ```
 6. Navegue até a pasta que contém o código:   
 ```
-cd 2_max_min_select/code
+cd 02_max_min_select/code
 ```
 7. Abra o arquivo 'main.py' e execute o código clicando no botão de executar da IDE ou executando o comando    
 ```

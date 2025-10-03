@@ -24,7 +24,10 @@ def andeParaONo(no: int, listaNos: list, nosVisitados: list, listaCaminhos: list
                 proximoCaminho = caminhosAPartirDoNodoAtualSemPassarPorNodosJaVisitados.pop()
                 #print(f"Seguindo caminho {proximoCaminho}")
                 caminhosPercorridos.append(proximoCaminho)
-                andeParaONo(proximoCaminho[0] if proximoCaminho[1] == no else proximoCaminho[1], listaNos, nosVisitados,listaCaminhos, caminhosPercorridos)
+                resultado = andeParaONo(proximoCaminho[0] if proximoCaminho[1] == no else proximoCaminho[1], listaNos, nosVisitados,listaCaminhos, caminhosPercorridos)
+                if set(listaNos) <= set(resultado):
+                    print(f"{listaNos} é um subconjunto de {resultado}!")
+                    return resultado
             nosVisitados.pop()
             return nosVisitados
         else:

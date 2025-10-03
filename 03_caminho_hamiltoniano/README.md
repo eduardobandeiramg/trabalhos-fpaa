@@ -20,7 +20,7 @@ Caso exista solução, o código exibirá no terminal uma mensagem com o primeir
 ![Grafo gerado](imagens_exemplo/grafo_exemplo_01.png)
 ![Grafo com o caminho destacado](imagens_exemplo/grafo_exemplo_02.png)
 
-Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, o que se verá no terminal será o seguinte:
+Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, apenas uma imagem com o grafo aleatório gerado será exibida e o que se verá no terminal será o seguinte:
 
 ![Nenhum caminho encontrado](imagens_exemplo/terminal_caminho_nao_encontrado.png)
 

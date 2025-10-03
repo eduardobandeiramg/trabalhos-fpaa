@@ -1,7 +1,7 @@
 # Substitua abaixo quantos nós deseja no seu grafo:
 nos = 9
 # Substitua abaixo o quão completo você deseja que seu grafo seja (de 0 a 1, sendo 0 totalmente incompleto e 1 totalmente completo)
-densidade = 0.2
+densidade = 0.25
 
 
 ##############################################################################

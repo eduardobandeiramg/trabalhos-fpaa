@@ -1,5 +1,7 @@
 # Arquivo com as funções de suporte ao código principal
 import networkx
+import networkx as nx
+import matplotlib.pyplot as plt
 
 ## Função que "anda" para o próximo nó:
 def andeParaONo(no: int, listaNos: list, nosVisitados: list, listaCaminhos: list, caminhosPercorridos: list):
@@ -38,5 +40,21 @@ def caminhoHamiltoniano(grafo: networkx.classes.graph.Graph):
         nosVisitados = andeParaONo(no, listaDeNos, listaDeNosVisitados, listaDeCaminhos, listaDeCaminhosPercorridos)
         if listaDeNos <= nosVisitados:
             print(f"Problema resolvido! Caminho hamiltoniano: {nosVisitados}")
-            return
+            return nosVisitados
     print("Não existe um caminho hamiltoniano para esse grafo!")
+
+
+    # Função para desenhar o grafo com o caminho descoberto destacado:
+def desenhaGrafos(grafo: networkx.classes.graph.Graph, caminho: list):
+    caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
+    pos = nx.spring_layout(grafo)
+    print(caminho)
+    nx.draw(grafo, pos, with_labels=True, font_weight='bold', font_color="white")
+    plt.show()
+    nx.draw(grafo, pos, with_labels=True, font_weight='bold', font_color='white', width=1)
+    nx.draw_networkx_edges(grafo, pos,
+                       edgelist=caminho,
+                       edge_color="red",
+                       width=3,
+                       style="dashed")
+    plt.show()

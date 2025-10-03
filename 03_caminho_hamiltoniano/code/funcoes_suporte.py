@@ -46,15 +46,16 @@ def caminhoHamiltoniano(grafo: networkx.classes.graph.Graph):
 
     # Função para desenhar o grafo com o caminho descoberto destacado:
 def desenhaGrafos(grafo: networkx.classes.graph.Graph, caminho: list):
-    caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
     pos = nx.spring_layout(grafo)
-    print(caminho)
     nx.draw(grafo, pos, with_labels=True, font_weight='bold', font_color="white")
     plt.show()
-    nx.draw(grafo, pos, with_labels=True, font_weight='bold', font_color='white', width=1)
-    nx.draw_networkx_edges(grafo, pos,
-                       edgelist=caminho,
-                       edge_color="red",
-                       width=3,
-                       style="dashed")
-    plt.show()
+    if caminho is not None:
+        caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
+        print(caminho)
+        nx.draw(grafo, pos, with_labels=True, font_weight='bold', font_color='white', width=1)
+        nx.draw_networkx_edges(grafo, pos,
+                        edgelist=caminho,
+                        edge_color="red",
+                        width=3,
+                        style="dashed")
+        plt.show()

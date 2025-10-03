@@ -6,7 +6,6 @@ def andeParaONo(no: int, listaNos: list, nosVisitados: list, listaCaminhos: list
     print(f"Entrando no nó {no}")
     nosVisitados.append(no)
     if set(listaNos) == set(nosVisitados):
-        #print(f"Problema resolvido! Caminho dos nós visitados: \n{nosVisitados}")
         return nosVisitados
     else:
         caminhosAPartirDoNodoAtual = [caminho for caminho in listaCaminhos if no in caminho]

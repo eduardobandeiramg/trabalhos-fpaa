@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 ## Função que "anda" para o próximo nó:
 def andeParaONo(no: int, listaNos: list, nosVisitados: list, listaCaminhos: list, caminhosPercorridos: list):
-    print(nosVisitados)
     nosVisitados.append(no)
+    print(nosVisitados)
     if set(listaNos) == set(nosVisitados):
         return nosVisitados
     else:

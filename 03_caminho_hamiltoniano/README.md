@@ -1,5 +1,5 @@
 # Caminho Hamiltoniano
-O caminho hamiltoniano é um problema conhecido da computação e descrito pelo enunciado clássico do 'caixeiro viajante'.  
+O caminho hamiltoniano é um problema conhecido da computação e trata-se de uma adaptação do problema do 'caixeiro viajante'.  
 Trata-se da tentativa de se determinar aquele caminho no qual passa-se por todos os nós de um grafo exatamente uma vez.
 Existem diveras abordagens possíveis para se resolver esse problema, tais quais: força bruta, algoritmos gulosos, divisão e conquista, backtracking, programação dinâmica, etc.
 
@@ -66,4 +66,16 @@ python main.py
 deactivate
 ```
 
-## Relatório técnico
+## Relatório técnico - Análise da complexidade computacional
+### Classes P, NP, NP-Completo e NP-Difícil
+1. O caminho hamiltoniano se encontra dentro da classe de problemas NP-Completo.
+2. Isso ocorre porque o algoritmo está dentro da classe de problemas NP-Difícil e também está dentro de problemas NP. Todo problema NP-difícil que faz parte de NP é chamado justamente de NP-Completo. O algoritmo é NP-Difícil porque é tão difícil quanto qualquer problema NP. Além disso, pode ser **verificado** em tempo polinomial (NP), dada uma certa solução candidata. O algoritmo está na mesma classe de complexidade do caixeiro viajante, com a diferença de que pode ser vericado em tempo polinomial, enquanto que o problema do caixeiro não pode.
+### Análise da complexidade assintótica de tempo
+1. A complexidade temporal do algoritmo é O(n!).
+2. Essa complexidade foi determinada realizando-se contagem de operações. No pior caso, todas as possibilidades de caminhos (até o penúltimo vértice) são analisadas e não existe um caminho hamiltoniano. Como os vértices em um caminho não podem se repetir, chegar até o penúltimo grafo representa a mesma complexidade de se chegar ao último, uma vez que, mesmo que haja uma solução, a partir do penúltimo só se poderia andar para o último grafo restante (uma única opção). Assim, partindo-se de um certo vértice do grafo, tem-se (n-1) opções restantes de caminho (total - vértice atual), depois (n-2) opções (total - vértices visitados), (n-3) (total - vértices visitados) e assim sucessivamente até chegar ao final.
+### Aplicação do Teorema Mestre
+1. Não é possível aplicar o Teorema Mestre ao algoritmo implementado.
+2. O Teorema Mestre exige que o tamanho da entrada reduza proporcionalmente a cada chamada recursiva do algoritmo (n/b). No caso do algoritmo implementado, o tamanho da entrada é reduzido em uma unidade a cada chamada recursiva. Além disso, o valor do parâmentro 'a' demanda que este seja uma constante (sendo tipicamente 2 para algoritos que dividem igualmente a entrada) e o algoritmo implementado faz chamadas recursivas um número n! de vezes. Ou seja, não é um número constante de vezes, mas sim um valor que depende diretamente da entrada, igual ao número de permutações possíveis dessa entrada.
+### Análise dos casos de complexidade
+1. No pior caso, o grafo não possui um caminho hamiltoniano e existem caminhos possíveis para que o algoritmo percorra, para cada vértice, todas as possibilidades de caminhos até o penúltimo vértice de um possível caminho hamiltoniano, antes de encontrar um 'beco sem saída'. Nesse caso, a complexidade será O(n!). No melhor caso, o primeiro percurso percorrido pelo algoritmo será um caminho hamiltoniano, retornando-o. Nesse caso, a complexidade será O(n). O caso médio é mais difícil de se determinar, pois depende diretamente da densidade do grafo a ser percorrido, sendo mais próximo de O(n) quanto mais denso for e mais próximo de O(n!) quanto menos denso ele for.
+2. O desempenho do algoritmo será melhor quanto mais próximo de O(n) ele for, ou seja, grafos com mais arestas (mais possibilidades de caminhos) terão desempenho superior quando comparados com grafos pouco densos (poucas arestas e menos possibilidades de caminhos). Caso a complexidade seja O(n) ou algo próximo disso, o problema será tratável. Porém, para grafos pouco densos e com complexidade próxima ou igual a O(n!), o problema é considerado intratável para entradas grandes (muitos vértices).

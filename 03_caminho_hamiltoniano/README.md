@@ -25,7 +25,10 @@ Por outro lado, caso não exista um caminho hamiltoniano para o grafo gerado, ap
 ![Nenhum caminho encontrado](assets/terminal_caminho_nao_encontrado.png)
 
 ## Explicando o código
-
+* Método "andeParaONo()":
+    A cada vez que o método é chamado e executado, o nó atual do caminho percorrido é armazenado (linha 8). Caso todos os nós do grafo já tenham sido percorridos, quer dizer que o caminho hamiltoniano acabou de ser percorrido e esse caminho pode ser retornado e a execução encerrada (linhas 10 e 11). Caso isso não seja realidade (linha 12), o algoritmo analisa suas opções de caminho a partir do nó atual (linha 13), removendo dessas possibilidades os nós já percorridos (linhas 14 a 18). Caso existam caminhos possíveis a se percorrer (linha 19), o algoritmo tentará todas as possibilidades de caminhos (linhas 20 a 27). Caso não existam caminhos possíveis a partir do nó atual, o algoritmo volta para o nó anterior (linhas 28 a 30).
+* Método "caminhoHamiltoniano()":
+    Esssa função é responsável, basicamente, por: receber um grafo, isolando os dados de vértices e caminhos (linhas 38 a 38); e chamar o método de caminhada para cada um dos vértices desse grafo (linhas 39 e 40). Caso uma solução seja encontrada pelo método "andeParaONo()", o algoritmo é encerrado e a solução é mostrada no terminal (linhas 41 a 43). Caso nenhum caminho seja encontrado, conclui-se que não existe caminho hamiltoniano para o grafo (linha 44) e esse resultado também é mostrado no terminal. 
 
 ## Como executar o código
 1. Clone o repositório

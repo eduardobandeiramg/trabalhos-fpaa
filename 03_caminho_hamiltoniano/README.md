@@ -1,5 +1,5 @@
 # Caminho Hamiltoniano
-O caminho hamiltoniano é um problema conhecido da computação e trata-se de uma adaptação do problema do 'caixeiro viajante'.  
+O caminho hamiltoniano é um problema clássico e conhecido da computação.
 Trata-se da tentativa de se determinar aquele caminho no qual passa-se por todos os nós de um grafo exatamente uma vez.
 Existem diveras abordagens possíveis para se resolver esse problema, tais quais: força bruta, algoritmos gulosos, divisão e conquista, backtracking, programação dinâmica, etc.
 

@@ -56,7 +56,7 @@ pip install -r requirements.txt
 cd 03_caminho_hamiltoniano/code
 ```
 7. Abra o arquivo 'main.py'
-8. (opcional) Escolha as configurações do grafo a ser gerado aleatoriamente. 
+8. (opcional) Escolha as configurações do grafo a ser gerado aleatoriamente.    
     8.1. Na variável 'nos', escolha a quantidade de nós que o grafo terá (deve ser um número inteiro).   
     8.2. Na variável 'densidade', escolha um número decimal de 0 a 1 para determinar a densidade do grafo a ser gerado aleatoriamente. 1 significa um grafo completo e 0 significa um grafo nulo (sem conexões via arestas). Esse valor indica a probabilidade de um dado par de nós do grafo possuir uma aresta entre eles.
 

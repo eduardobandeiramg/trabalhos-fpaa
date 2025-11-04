@@ -1,3 +1,5 @@
+Corrigir algoritmo (jogar matriz da foto na função e ver caminho passo a passo)
+
 o que garante que nao vou voltar em um ponto ja passado?
 
 mostrar resultados exatamente como esperado (lista de coordenadas)

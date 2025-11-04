@@ -16,3 +16,5 @@ print(f'Coordenadas do final: {matrizGerada[2]}')
 resultado = fs.AEstrela(matriz=matrizGerada[0], inicio=matrizGerada[1], fim=matrizGerada[2])
 print(f'\nResultado:')
 print(resultado)
+
+#print("\033[31mTexto vermelho\033[0m")

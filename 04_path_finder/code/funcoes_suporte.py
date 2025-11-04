@@ -1,6 +1,5 @@
 import numpy as np
 
-# TODO: GERAR MATRIZ COM DENSIDADE MENOR DE OBSTACULOS!!
 # Função que gera uma matriz aleatória:
 def geraMatriz(n: int):
     matriz = np.random.randint(0, 2, (n,n))
@@ -10,6 +9,8 @@ def geraMatriz(n: int):
 
 # Função que implementa o algoritmo A*
 def AEstrela(matriz, inicio, fim, caminho: list = []):
+    print(caminho)
+    input()
     posicaoAtual = caminho[len(caminho) - 1] if len(caminho) > 0 else inicio
     if posicaoAtual == fim:
         return caminho

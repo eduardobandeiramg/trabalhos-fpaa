@@ -21,23 +21,30 @@ resultado = fs.AEstrela(matriz=matrizGerada[0], inicio=matrizGerada[1], fim=matr
 print('\n\n\n**********   Resultados   **********')
 if resultado is None:
     print('\n\nSem solução! Não existe caminho entre os pontos do labirinto!\n\n\n')
+    resultado = []
 else:
     resultado.insert(0, matrizGerada[1])
     print('\n\nMenor caminho (em coordenadas):\n')
     print(resultado)
-    matriz = matrizGerada[0].astype(object)
-    matriz[matrizGerada[1][0]][matrizGerada[1][1]] = 'S'
-    matriz[matrizGerada[2][0]][matrizGerada[2][1]] = 'E'
-    destaques = resultado
-    plt.imshow(matrizGerada[0], cmap='Blues', interpolation='nearest')
-    for i in range(matrizGerada[0].shape[0]):
-        for j in range(matrizGerada[0].shape[1]):
-            cor_texto = 'red' if (i, j) in destaques else 'black'
-            plt.text(j, i, f'{matriz[i, j]}',
-                    ha='center', va='center',
-                    color=cor_texto, fontsize=12, fontweight='bold')
 
-    plt.xticks(np.arange(matrizGerada[0].shape[1]))
-    plt.yticks(np.arange(matrizGerada[0].shape[0]))
-    plt.grid(False)
-    plt.show()
+matriz = matrizGerada[0].astype(object)
+matriz[matrizGerada[1][0]][matrizGerada[1][1]] = 'S'
+matriz[matrizGerada[2][0]][matrizGerada[2][1]] = 'E'
+destaques = resultado
+plt.imshow(matrizGerada[0], cmap='Reds', interpolation='nearest')
+
+plt.scatter(matrizGerada[1][1], matrizGerada[1][0], color='blue', s=400, edgecolors='black')
+plt.scatter(matrizGerada[2][1], matrizGerada[2][0], color='blue', s=400, edgecolors='black')
+
+
+for i in range(matrizGerada[0].shape[0]):
+    for j in range(matrizGerada[0].shape[1]):
+        cor_texto = 'red' if (i, j) in destaques else 'black'
+        plt.text(j, i, f'{matriz[i, j]}',
+                ha='center', va='center',
+                color=cor_texto, fontsize=12, fontweight='bold')
+
+plt.xticks(np.arange(matrizGerada[0].shape[1]))
+plt.yticks(np.arange(matrizGerada[0].shape[0]))
+plt.grid(False)
+plt.show()

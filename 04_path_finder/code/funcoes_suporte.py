@@ -12,7 +12,6 @@ def geraMatriz(n: int):
 def AEstrela(matriz, inicio, fim, caminho: list = []):
     posicaoAtual = caminho[len(caminho) - 1] if len(caminho) > 0 else inicio
     if posicaoAtual == fim:
-        print('\nSolução encontrada!')
         return caminho
     else:
         possibilidades = [(posicaoAtual[0]-1, posicaoAtual[1]), (posicaoAtual[0]+1, posicaoAtual[1]), (posicaoAtual[0], posicaoAtual[1]-1), (posicaoAtual[0], posicaoAtual[1]+1)]

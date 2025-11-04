@@ -1,4 +1,3 @@
-lista = []
-
-for a in range(0, len(lista)):
-    print(a)
+lista = [2, 3]
+lista.insert(0,1)
+print(lista)

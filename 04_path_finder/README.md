@@ -19,6 +19,6 @@ A matriz gerada é, então passada para a função 'AEstrela()' juntamente aos p
 
 Caso haja uma solução, a função retorna o caminho percorrido (ordem das coordenadas dos pontos percorridos). Caso contrário, retorna nulo ('None').
 
-O algoritmo (main.py) que chama as duas funções citadas, então, desenha a matriz gerada com a biblioteca [matplotlib](https://matplotlib.org), destacando os pontos inicial e final e o caminho percorrido, se existir.
+O algoritmo (main.py) que chama as duas funções citadas, então, desenha a matriz gerada utilizando a biblioteca [matplotlib](https://matplotlib.org), destacando os pontos inicial e final e o caminho percorrido, se existir.
 
 ## Como executar o código

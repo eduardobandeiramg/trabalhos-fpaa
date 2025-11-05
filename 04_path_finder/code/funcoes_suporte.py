@@ -9,6 +9,7 @@ def geraMatriz(n: int):
 
 # Função que implementa o algoritmo A*
 def AEstrela(matriz, inicio, fim, caminho: list = []):
+    # TODO: REMOVER
     print(caminho)
     input()
     posicaoAtual = caminho[len(caminho) - 1] if len(caminho) > 0 else inicio

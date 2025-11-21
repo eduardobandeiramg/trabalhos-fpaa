@@ -15,7 +15,7 @@ A matriz gerada é, então passada para a função 'AEstrela()' juntamente aos p
 * deve ser igual a zero (0)
 * deve conter a menor distância para o ponto final, dentre as outras opções possíveis (distância = distância vertical + distância horizontal)
 
-Caso haja uma solução, a função retorna o caminho percorrido (ordem das coordenadas dos pontos percorridos). Caso contrário, retorna nulo ('None').
+Caso haja uma solução, a função retorna o caminho percorrido (ordem das coordenadas dos pontos percorridos). Caso contrário, retorna nulo ('None'). O algoritmo (main.py) que chama as duas funções citadas, então, desenha a matriz gerada utilizando a biblioteca [matplotlib](https://matplotlib.org), destacando os pontos inicial e final e o caminho percorrido, se ele existir.
 
 Resultado caso um caminho seja encontrado:
 
@@ -36,8 +36,6 @@ Resultado caso um caminho não seja encontrado:
 <p align="center">
   <img src="assets/erro_terminal.png">
 </p>
-
-O algoritmo (main.py) que chama as duas funções citadas, então, desenha a matriz gerada utilizando a biblioteca [matplotlib](https://matplotlib.org), destacando os pontos inicial e final e o caminho percorrido, se existir.
 
 ## Como executar o código
 1. Clone o repositório

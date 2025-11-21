@@ -10,9 +10,6 @@ Neste projeto específico, é gerada uma matriz n X n aleatória utilizando a bi
   <img src="assets/input1.png">
 </p>
 
-
-![Input para o usuário e matriz gerada no terminal](assets/input1.png)
-
 A matriz gerada é, então passada para a função 'AEstrela()' juntamente aos pontos inicial e final. Essa função recursiva percorre a matriz, escolhendo o próximo ponto do caminho que respeite às seguintes exigências:
 * deve estar dentro dos limites da matriz
 * deve ser igual a zero (0)
@@ -22,15 +19,23 @@ Caso haja uma solução, a função retorna o caminho percorrido (ordem das coor
 
 Resultado caso um caminho seja encontrado:
 
-![Labirinto com caminho encontrado](assets/encontrado_labirinto.png)
+<p align="center">
+  <img src="assets/encontrado_labirinto.png">
+</p>
 
-![Terminal com caminho encontrado](assets/encontrado_terminal.png)
+<p align="center">
+  <img src="assets/encontrado_terminal.png">
+</p>
 
 Resultado caso um caminho não seja encontrado:
 
-![Labirinto sem solução](assets/erro_labirinto.png)
+<p align="center">
+  <img src="assets/erro_labirinto.png">
+</p>
 
-![Terminal sem solução](assets/erro_terminal.png)
+<p align="center">
+  <img src="assets/erro_terminal.png">
+</p>
 
 O algoritmo (main.py) que chama as duas funções citadas, então, desenha a matriz gerada utilizando a biblioteca [matplotlib](https://matplotlib.org), destacando os pontos inicial e final e o caminho percorrido, se existir.
 

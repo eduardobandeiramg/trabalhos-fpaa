@@ -1,3 +1,2 @@
-lista = [2, 3]
-lista.insert(0,1)
-print(lista)
+lista = [(1,2), (4,5), (6,9)]
+print((1, 2) in lista)

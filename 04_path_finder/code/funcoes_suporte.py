@@ -11,7 +11,6 @@ def geraMatriz(n: int):
 def AEstrela(matriz, inicio, fim, caminho: list = []):
     # TODO: REMOVER
     print(caminho)
-    input()
     posicaoAtual = caminho[len(caminho) - 1] if len(caminho) > 0 else inicio
     if posicaoAtual == fim:
         return caminho

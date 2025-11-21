@@ -6,6 +6,11 @@ Ele se assemelha muito ao algoritmo de backtracking, com o diferencial de "camin
 ## A solução implementada
 Neste projeto específico, é gerada uma matriz n X n aleatória utilizando a biblioteca [numpy](https://numpy.org), sendo o n definido pelo usuário no momento da execução do código. Uma vez gerada a matriz, ela é mostrada no console juntamente com os pontos inicial e final, definidos também de forma aleatória através da mesma biblioteca.
 
+<p align="center">
+  <img src="assets/input1.png">
+</p>
+
+
 ![Input para o usuário e matriz gerada no terminal](assets/input1.png)
 
 A matriz gerada é, então passada para a função 'AEstrela()' juntamente aos pontos inicial e final. Essa função recursiva percorre a matriz, escolhendo o próximo ponto do caminho que respeite às seguintes exigências:

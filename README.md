@@ -6,6 +6,8 @@ Os algoritmos implementados foram:
 1. [Algoritmo de Karatsuba](01_algoritmo_de_karatsuba/)
 2. [Seleção de valores máximos e mínimos de uma lista](02_max_min_select/)
 3. [Caminho Hamiltoniano](03_caminho_hamiltoniano/)
+4. [Path Finder](04_path_finder/)
+5. [Flood Fill](05_flood_fill/)
 
 Aluno: Eduardo Bandeira de Melo Guimarães   
 Matrícula: 741607

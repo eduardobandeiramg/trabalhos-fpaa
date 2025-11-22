@@ -1,5 +1,5 @@
 # Flood Fill
-Como o próprio nome sugere, o algoritmo Flood Fill busca analisar as áreas que seriam "inundadas" caso se jogasse um líquido dentro das partes "livres" do labirinto, neste caso representadas pelos algarismos "0" da matriz. As barreiras ou muros são representadas pelo algarismo "1".
+Como o próprio nome sugere, o algoritmo Flood Fill busca analisar as áreas distintas que seriam "inundadas" caso se jogasse um líquido dentro das partes "livres" do labirinto, neste caso representadas pelos algarismos "0" da matriz. As barreiras ou muros são representadas pelo algarismo "1".
 
 ## Funcionamento do algoritmo
 O algoritmo funciona da seguinte forma:

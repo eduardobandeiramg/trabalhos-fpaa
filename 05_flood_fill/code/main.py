@@ -1,5 +1,5 @@
 import numpy as np
-from funcoes_suporte import floadFill, buscaPiscina
+from funcoes_suporte import floadFill
 
 # Gerando a matriz aleatória:
 n = int(input('Digite o valor de n que deseja para a matriz de dimensões n X n: '))
